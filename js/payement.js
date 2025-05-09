@@ -53,7 +53,7 @@ document.getElementById("btn-rechercher").addEventListener("click", async () => 
     const prenoms = prenomsArray.join(" ");
   
     try {
-      const response = await fetch(`http://localhost:5000/api/eleves/rechercher?nom=${encodeURIComponent(nomOnly)}&prenoms=${encodeURIComponent(prenoms)}&classe=${classe}`);
+      const response = await fetch(`https://cspambackend.onrender.com/api/eleves/rechercher?nom=${encodeURIComponent(nomOnly)}&prenoms=${encodeURIComponent(prenoms)}&classe=${classe}`);
       const data = await response.json();
   
       if (!response.ok) {
